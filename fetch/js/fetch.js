@@ -2,7 +2,7 @@ function LoadUser(){
     let url = "https://randomuser.me/api/"
 
     fetch(url)
-    .then(response) = response.json()
+    .then(response) => response.json())
     .then(data => {
         let fn = document.getElementById("firstName")
         let ln = document.getElementById("lastName")
@@ -32,7 +32,7 @@ function elLoadMultipleUsers(userCount){
     let temp = ""
 
     fetch(url)
-    .then(response) = response.json()
+    .then(response) => response.json())
     .then(faiz => {
         let allUsers = document.getElementById("allUsers")
 

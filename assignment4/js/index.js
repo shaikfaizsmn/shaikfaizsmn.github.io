@@ -1,7 +1,7 @@
 console.clear()
 
-console.log("Enter array value")
-var arr = window.prompt("arr"); alert("You have input the following values : " + arr)
+let
+
 function mixMaxAvg(arr){
     var max = arr[0]
     var min = arr[0]

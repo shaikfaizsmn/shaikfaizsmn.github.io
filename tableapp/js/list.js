@@ -14,7 +14,7 @@ function GetBooking() {
             let bookingNameList = document.getElementById("bookingNameList")
 
             // delete all rows in the table
-            for(let k = bookingNameList.ariaRowSpan.length - 1; k > 0; k--){
+            for(let k = bookingNameList.rows.length - 1; k > 0; k--){
                 bookingNameList.deleteRow(k)
             }
 
@@ -28,7 +28,7 @@ function GetBooking() {
                 let gId = json.bookings[i].id;
                 let btnId = "delete" + gId;
 
-                let row = bookingNameList.insertRow(bookingNameList.ariaRowSpan.length)
+                let row = bookingNameList.insertRow(bookingNameList.rows.length)
                 row.insertCell(0).innerHTML = gId
                 row.insertCell(1).innerHTML = gName
                 row.insertCell(2).innerHTML = gEmail

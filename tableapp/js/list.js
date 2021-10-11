@@ -12,6 +12,7 @@ function GetBooking() {
             console.log(json.bookings);
 
             let bookingNameList = document.getElementById("bookingNameList")
+            let bookingIds = []
 
             // delete all rows in the table
             for(let k = bookingNameList.rows.length - 1; k > 0; k--){

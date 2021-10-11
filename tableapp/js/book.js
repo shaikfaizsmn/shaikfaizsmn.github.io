@@ -29,7 +29,7 @@ function BookNow(userName, userEmail, userPax, userRemarks) {
     fetch(url, {
         method: 'POST',
         body: JSON.stringify(body),
-        header: {
+        headers: {
             "Content-Type": "application/json"
         }
 
@@ -37,6 +37,7 @@ function BookNow(userName, userEmail, userPax, userRemarks) {
         .then((response) => response.json())
         .then(json => {
             // Do something with object
-            console.log(json.booking);
+            console.log(json.booking);            
+                alert(json.booking.name + " added in the list!")            
         });
 }

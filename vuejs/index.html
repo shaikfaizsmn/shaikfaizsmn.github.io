@@ -39,11 +39,14 @@
         <p>{{ message }}</p>
         <input type="text" v-model="message">
         <ol>
-            <grocery-list v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id"></grocery-list>
+            <grocery-list v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id"></grocery-list> <!-- first list. can add another list within same div-->
+        </ol>
+        <ol>
+            <grocery-list v-for="item in orderList" v-bind:todo="item" v-bind:key="item.id"></grocery-list>
         </ol>
     </div>
 
-    <script src="js/grocery-list.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/grocery-list.js"></script>  <!-- if you want to add jscript, add at the bottom-->
+    <script src="js/index.js"></script> <!-- but arrange according to which script you want to run first. everything in hierarchial order. top to bottom -->
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 function factorial(x){
     if(x === 0){
         return 1;
@@ -5,4 +6,4 @@ function factorial(x){
     return x * factorial(x-1);
 }
 
-console.log(factorial("number"))
+console.log(factorial("x"))

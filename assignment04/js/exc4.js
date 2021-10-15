@@ -16,7 +16,7 @@ function checkPalindrome(text)
 }  
 function checkPalindrome()  
 {  
-var num = document.getElementById("text").value;  
+var text = document.getElementById("str").value;  
 var f = checkPalindrome(text);  
 document.getElementById("res").innerHTML="This word " + num + " is: " + f ;  
 }  

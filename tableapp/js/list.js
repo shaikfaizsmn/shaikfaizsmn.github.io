@@ -15,13 +15,13 @@ function GetBooking() {
             let bookingIds = []
 
             // delete all rows in the table
-            for(let k = bookingNameList.rows.length - 1; k > 0; k--){
+            for (let k = bookingNameList.rows.length - 1; k > 0; k--) {
                 bookingNameList.deleteRow(k)
             }
 
 
             //load all rows from sheety api
-            for(let i = 0; i < json.bookings.length; i++){
+            for (let i = 0; i < json.bookings.length; i++) {
                 let gName = json.bookings[i].name;
                 let gEmail = json.bookings[i].email;
                 let gPax = json.bookings[i].gPax;
@@ -39,5 +39,25 @@ function GetBooking() {
 
                 bookingIds.push(btnId)
             }
+
+            for (let j = 0; j < bookingIds.length; j++) {
+                let el = document.getElementById(bookingIds[j])
+                el.addEventListener("click", function () {
+                    let theId = el.id.replace("delete", "")
+                    DeleteBooking(theId)
+                })
+            }
         });
 }
+
+function DeleteBooking(id) {
+    let url = 'https://api.sheety.co/391933236f9693f6d5b117cf495aa9c8/bookingApp/bookings/2'+ id;
+    fetch(url, {
+        method: 'DELETE',
+    })        
+        .then(() => {
+            alert("Record id " + id + " deleted!")
+        });
+}
+
+//need to change label according to theme, this codes are already ready for final project application

@@ -66,19 +66,19 @@ let app5 = new Vue({
         orderList: [
             {
                 id: 1,
-                desc: "Rocket Salad"
+                desc: "Laksa"
             },
             {
                 id: 2,
-                desc: "Cheese"
+                desc: "Cincau"
             },
             {
                 id: 3,
-                desc: "Ramen"
+                desc: "Rojak"
             },
             {
                 id: 4,
-                desc: "Ice Lemon Tea"
+                desc: "Kepak Ayam"
             }
         ]
     }

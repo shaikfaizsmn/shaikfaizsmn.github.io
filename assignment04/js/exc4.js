@@ -1,5 +1,14 @@
-document.addEventListener("click", myFunction);
+var y = prompt("type number ");
+var x = input;
 
-function myFunction() {
-  document.getElementById("demo").innerHTML = "Hello World";
+ function factorial(x) {
+   if(x==0) {
+      return 1;
+   }
+   return x * factorial(x-1);
 }
+
+function run(number) {
+    alert(factorial(parseInt(number, 10)));
+}
+run(x);

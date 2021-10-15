@@ -1,15 +1,15 @@
-
-function factorial(x){
-    if(x === 0){
-        return 1;
-    }
-    return x * factorial(x-1);
-}
-
-document.addEventListener("click", factorial);
-
-function factorial() {
-  document.getElementById("x").innerHTML = "number";
-}
-
-console.log(factorial("x"))
+function fact(num)   
+{  
+if (num == 0) {  
+return 1;  
+}  
+else {  
+return num * fact( num - 1 );  
+}  
+}  
+function fact1()  
+{  
+var num = document.getElementById("number").value;  
+var f = fact(num);  
+document.getElementById("res").innerHTML="The factorial of the number " + num + " is: " + f ;  
+}  
